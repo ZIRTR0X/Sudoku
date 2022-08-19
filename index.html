@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./public/css/style.css">
+    <title>Sudoku</title>
+</head>
+<body>
+    <header>
+
+    </header>
+    <main>
+        <table id="sudoku_grid">
+            <tr>
+                <td class="row1 group1 column1">
+                    
+                </td>
+                <td class="row1 group1 column2">
+                    
+                </td>
+                <td class="row1 group1 column3">
+                    
+                </td>
+                <td class="row1 group2 column4">
+                    
+                </td>
+                <td class="row1 group2 column5">
+                    
+                </td>
+                <td class="row1 group2 column6">
+                    
+                </td>
+                <td class="row1 group3 column7">
+                    
+                </td>
+                <td class="row1 group3 column8">
+                    
+                </td>
+                <td class="row1 group3 column9">
+                    
+                </td>
+            </tr>
+            <tr>
+                <td class="row2 group1 column1">
+                    
+                </td>
+                <td class="row2 group1 column2">
+                    
+                </td>
+                <td class="row2 group1 column3">
+                    
+                </td>
+                <td class="row2 group2 column4">
+                    
+                </td>
+                <td class="row2 group2 column5">
+                    
+                </td>
+                <td class="row2 group2 column6">
+                    
+                </td>
+                <td class="row2 group3 column7">
+                    
+                </td>
+                <td class="row2 group3 column8">
+                    
+                </td>
+                <td class="row2 group3 column9">
+                    
+                </td>
+            </tr>
+            <tr>
+                <td class="row3 group1 column1">
+                    
+                </td>
+                <td class="row3 group1 column2">
+                    
+                </td>
+                <td class="row3 group1 column3">
+                    
+                </td>
+                <td class="row3 group2 column4">
+                    
+                </td>
+                <td class="row3 group2 column5">
+                    
+                </td>
+                <td class="row3 group2 column6">
+                    
+                </td>
+                <td class="row3 group3 column7">
+                    
+                </td>
+                <td class="row3 group3 column8">
+                    
+                </td>
+                <td class="row3 group3 column9">
+                    
+                </td>
+            </tr>
+            <tr>
+                <td class="row4 group4 column1">
+                    
+                </td>
+                <td class="row4 group4 column2">
+                    
+                </td>
+                <td class="row4 group4 column3">
+                    
+                </td>
+                <td class="row4 group5 column4">
+                    
+                </td>
+                <td class="row4 group5 column5">
+                    
+                </td>
+                <td class="row4 group5 column6">
+                    
+                </td>
+                <td class="row4 group6 column7">
+                    
+                </td>
+                <td class="row4 group6 column8">
+                    
+                </td>
+                <td class="row4 group6 column9">
+                    
+                </td>
+            </tr>
+            <tr>
+                <td class="row5 group4 column1">
+                    
+                </td>
+                <td class="row5 group4 column2">
+                    
+                </td>
+                <td class="row5 group4 column3">
+                    
+                </td>
+                <td class="row5 group5 column4">
+                    
+                </td>
+                <td class="row5 group5 column5">
+                    
+                </td>
+                <td class="row5 group5 column6">
+                    
+                </td>
+                <td class="row5 group6 column7">
+                    
+                </td>
+                <td class="row5 group6 column8">
+                    
+                </td>
+                <td class="row5 group6 column9">
+                    
+                </td>
+            </tr>
+            <tr>
+                <td class="row6 group4 column1">
+                    
+                </td>
+                <td class="row6 group4 column2">
+                    
+                </td>
+                <td class="row6 group4 column3">
+                    
+                </td>
+                <td class="row6 group5 column4">
+                    
+                </td>
+                <td class="row6 group5 column5">
+                    
+                </td>
+                <td class="row6 group5 column6">
+                    
+                </td>
+                <td class="row6 group6 column7">
+                    
+                </td>
+                <td class="row6 group6 column8">
+                    
+                </td>
+                <td class="row6 group6 column9">
+                    
+                </td>
+            </tr>
+            <tr>
+                <td class="row7 group7 column1">
+                    
+                </td>
+                <td class="row7 group7 column2">
+                    
+                </td>
+                <td class="row7 group7 column3">
+                    
+                </td>
+                <td class="row7 group8 column4">
+                    
+                </td>
+                <td class="row7 group8 column5">
+                    
+                </td>
+                <td class="row7 group8 column6">
+                    
+                </td>
+                <td class="row7 group9 column7">
+                    
+                </td>
+                <td class="row7 group9 column8">
+                    
+                </td>
+                <td class="row7 group9 column9">
+                    
+                </td>
+            </tr>
+            <tr>
+                <td class="row8 group7 column1">
+                    
+                </td>
+                <td class="row8 group7 column2">
+                    
+                </td>
+                <td class="row8 group7 column3">
+                    
+                </td>
+                <td class="row8 group8 column4">
+                    
+                </td>
+                <td class="row8 group8 column5">
+                    
+                </td>
+                <td class="row8 group8 column6">
+                    
+                </td>
+                <td class="row8 group9 column7">
+                    
+                </td>
+                <td class="row8 group9 column8">
+                    
+                </td>
+                <td class="row8 group9 column9">
+                    
+                </td>
+            </tr>
+            <tr>
+                <td class="row9 group7 column1">
+                    
+                </td>
+                <td class="row9 group7 column2">
+                    
+                </td>
+                <td class="row9 group7 column3">
+                    
+                </td>
+                <td class="row9 group8 column4">
+                    
+                </td>
+                <td class="row9 group8 column5">
+                    
+                </td>
+                <td class="row9 group8 column6">
+                    
+                </td>
+                <td class="row9 group9 column7">
+                    
+                </td>
+                <td class="row9 group9 column8">
+                    
+                </td>
+                <td class="row9 group9 column9">
+                    
+                </td>
+            </tr>
+        </table>
+    </main>
+</body>
+<script src="./public/js/grid.js"></script>
+<script src="./public/js/gridGeneration.js"></script>
+</html>
