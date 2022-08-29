@@ -26,70 +26,45 @@ function checkColumn(number, i, j){
 }
 
 function findGroup(i, j){
-    console.log(i, j);
     i++;
     let box = document.querySelectorAll('.row'+i)[j];
-    console.log(box);
-    console.log("find group : " + box.classList[1]);
     return box.classList[1];
 }
 
 findGroup(8, 8);
 
 function checkGroup(number, i, j) {
-    // let group = document.querySelectorAll(findGroup(i, j));
-    // for(let k = 0; k < group.length; k++) {
-    //     if(group[k].innerHTML == number) {
-    //         return false;
-    //     }
-    // }
-    // return true;
-    console.log("debut checkGroup");
     let group = parseInt(findGroup(i-1, j).split('group')[1]);
-    console.log(group);
     if(numberGroupState[group-1][number-1] == 1){
-        console.log("fin checkGroup 1");
         return false;
     }else{
-        console.log("fin checkGroup 2");
         return true;
     }
 }
-
-// console.log(findGroup(1, 4));
 
 let iterationNombre = 0;
 
 function checkNumber(i, j, numbersState){
     iterationNombre++;
-    console.log("debut checkNumber");
     let random = Math.floor(Math.random() * 9) + 1;
     let num = i + 1;
 
-    console.log("Debug - random : " + random);
     if(iterationNombre < 15){
         if(numbersState[parseInt(random) - 1] === 1){
-            console.log("-- numbersState");
             return checkNumber(i, j, numbersState);
         }else{
-            console.log("-- else1");
             if(checkColumn(random, i, j) === false) {
-                console.log("-- checkColumn");
                 return checkNumber(i, j, numbersState);
             }else{
-                console.log("-- else2");
                 if(checkGroup(random, num, j) === false) {
-                    console.log("-- checkGroup");
                     return checkNumber(i, j, numbersState);
                 }else{
-                    console.log("fin checkNumber");
                     iterationNombre = 0;
                     return random;
                 }
             }
         }
     }else{
-        console.log("fin checkNumber");
         iterationNombre = "";
         return 0;
     }
@@ -123,20 +98,18 @@ function generateGrid(grid, level) {
             if (probablity < levelProba) {
                 grid[i][j] = "";
             } else {
-                console.log("[]-----Les coordonnées sont : " + i + " " + j+"-----[]");
 
                 let number = checkNumber(i, j, numbersState);
+                if(number != 0) {
                 grid[i][j] = number;
-
-                console.log("last random: " + number);
+                } else {
+                    grid[i][j] = "";
+                }
 
                 let group = parseInt(findGroup(i, j).split('group')[1]);
 
-                console.log("group: " + group);
-
                 numberGroupState[group-1][number-1] = 1;
                 numbersState[number - 1] = 1;
-                console.log("[]----- END -----[]");
             }
         }
     }
