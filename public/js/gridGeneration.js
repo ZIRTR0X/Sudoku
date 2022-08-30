@@ -1,22 +1,32 @@
 let grid = new Array(9);
-for (let i = 0; i < 9; i++) {
-    grid[i] = new Array(9);
-    for (let j = 0; j < 9; j++) {
-        grid[i][j] = 0;
+function resetGrid(grid) {
+    for (let i = 0; i < 9; i++) {
+        grid[i] = new Array(9);
+        for (let j = 0; j < 9; j++) {
+            grid[i][j] = 0;
+        }
     }
 }
+resetGrid(grid);
 console.log(grid);
 
+function getGrid() {
+    return grid;
+}
+
 let numberGroupState = new Array(9);
-for (let i = 0; i < 9; i++) {
-    numberGroupState[i] = new Array(9);
-    for (let j = 0; j < 9; j++) {
-        numberGroupState[i][j] = 0;
+function resetNumberGroupState(numberGroupState){
+    for (let i = 0; i < 9; i++) {
+        numberGroupState[i] = new Array(9);
+        for (let j = 0; j < 9; j++) {
+            numberGroupState[i][j] = 0;
+        }
     }
 }
+resetNumberGroupState(numberGroupState);
 console.log(numberGroupState);
 
-function checkColumn(number, i, j){
+function checkColumn(number, i, j, grid){
     for(let k = 0; k < 9; k++) {
         if(grid[k][j] == number && k != i) {
             return false;
@@ -53,7 +63,7 @@ function checkNumber(i, j, numbersState){
         if(numbersState[parseInt(random) - 1] === 1){
             return checkNumber(i, j, numbersState);
         }else{
-            if(checkColumn(random, i, j) === false) {
+            if(checkColumn(random, i, j, grid) === false) {
                 return checkNumber(i, j, numbersState);
             }else{
                 if(checkGroup(random, num, j) === false) {
@@ -72,18 +82,19 @@ function checkNumber(i, j, numbersState){
 
 function generateGrid(grid, level) {
     let levelProba = 0;
+    resetNumberGroupState(numberGroupState);
     switch(level) {
-        case 1:
-            levelProba = 0.33;
+        case "easy":
+            levelProba = 0.40;
             break;
-        case 2:
-            levelProba = 0.45;
+        case "medium":
+            levelProba = 0.60;
             break;
-        case 3:
-            levelProba = 0.65;
+        case "hard":
+            levelProba = 0.70;
             break;
-        case 4:
-            levelProba = 0.85;
+        case "impossible":
+            levelProba = 0.80;
             break;
     }
 
@@ -115,8 +126,6 @@ function generateGrid(grid, level) {
     }
 }
 
-generateGrid(grid, 1);
-
 function showGrid(grid) {
     for(let i = 0; i < 9; i++) {
         for(let j = 0; j < 9; j++) {
@@ -127,4 +136,5 @@ function showGrid(grid) {
     }
 }
 
-showGrid(grid);
+// generateGrid(grid, 1);
+// showGrid(grid);

@@ -5,6 +5,29 @@ body {
     background-color: rgb(53, 52, 68);
 }
 
+main {
+    background-color: aqua;
+    margin-right: 20%;
+    margin-left: 20%;
+}
+
+header {
+    background-color: rgb(2, 238, 53);
+    margin-right: 20%;
+    margin-left: 20%;
+}
+
+/* Style of the boxe */
+
+.selected {
+    background-color: rgb(125, 123, 123);
+}
+
+.unselected {
+    background-color: rgb(77, 77, 77);
+}
+
+/* End style of the boxe */
 
 /* Sudoku grid */
 
@@ -21,7 +44,6 @@ body {
     font-family: Arial;
     font-weight: bold;
     color: rgb(177, 177, 177);
-    background-color: rgb(77, 77, 77);
 }
 
 .column1, .column7 {
