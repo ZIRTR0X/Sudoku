@@ -27,6 +27,10 @@ header {
     background-color: rgb(77, 77, 77);
 }
 
+.colorhelp {
+    background-color: rgb(100, 100, 100);
+}
+
 /* End style of the boxe */
 
 /* Sudoku grid */
