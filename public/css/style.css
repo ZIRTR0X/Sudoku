@@ -142,3 +142,21 @@ border-radius: 50%;
 }
 
 /* ---------- End toggle switch ---------- */
+
+/* ---------- Numpad ---------- */
+
+#numpad td {
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 40px;
+    font-family: Arial;
+    font-weight: bold;
+    color: rgb(177, 177, 177);
+}
+
+#numpad tr {
+    background-color: rgb(89, 89, 89);
+}
+/* ---------- End numpad ---------- */

@@ -54,7 +54,6 @@ function searchBoxSelect(){
     let setectedBox;
     boxe.forEach(function(box){
         if(box.classList.contains("selected")){
-            console.log(box);
             setectedBox = box;
         }
     });
